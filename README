@@ -1,0 +1,27 @@
+Host info:
+	uname -a
+	Linux 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
+
+	lsb_release -a
+	LSB Version:    core-9.20160110ubuntu0.2-amd64:core-9.20160110ubuntu0.2-noarch:security-9.20160110ubuntu0.2-amd64:security-9.20160110ubuntu0.2-noarch
+	Distributor ID: Ubuntu
+	Description:    Ubuntu 16.04.1 LTS
+	Release:        16.04
+	Codename:       xenial
+
+sudo apt-get install texlive-base
+sudo apt-get install texlive-bibtex-extra biber
+sudo apt-get install texlive-fonts-recommended
+sudo apt-get install texlive-fonts-extra
+sudo apt-get install texlive-science
+sudo apt-get install latex-make
+sudo apt-add-repository ppa:texlive-backports/ppa
+sudo apt-get install texlive-lang-cjk
+sudo apt-get install texlive-metapost
+sudo apt-get install gv
+sudo apt-get install asymptote
+sudo apt-get install freeglut3-dev
+sudo apt-get instal fig2ps
+sudo apt-get install graphviz
+sudo apt-get install inkscape
+sudo apt-get install texexpand
