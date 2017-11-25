@@ -1,0 +1,34 @@
+\documentclass[class=book, crop=false]{standalone}
+\usepackage[subpreambles=false]{standalone}
+\include{../config/config}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+
+\chapter*{Appendix C Installing GDB}
+\addcontentsline{toc}{chapter}{Installing GDB}
+
+\input{appendix_head.tex}
+
+\input{section_reqt_build_gdb.tex}
+
+\input{section_tools_for_build.tex}
+
+\input{section_tool_build_optional.tex}
+
+\setcounter{section}{1}
+
+\input{section_invoke_gdb_config.tex}
+
+\input{section_compile_gdb_in_otherdir.tex}
+
+\input{section_specify_hosttarget.tex}
+
+\input{section_configure_options.tex}
+
+\input{section_system_configset.tex}
+
+\cleardoublepage
+
+\end{CJK}
+\end{document}
