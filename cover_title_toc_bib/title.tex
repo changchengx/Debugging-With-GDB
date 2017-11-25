@@ -1,0 +1,60 @@
+\documentclass[class=book, crop=false]{standalone}
+\usepackage[subpreambles=false]{standalone}
+\include{../config/config}
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\pagenumbering{gobble}
+\begin{titlepage}
+\centering
+\includegraphics[width=0.8\textwidth]{title} \vspace{1cm}
+\par
+
+\begingroup
+\fontsize{68pt}{22pt}\selectfont
+\vspace{2ex}
+\centering
+{\fontsize{20}{15}\bfseries\scshape 使用GDB调试} \par
+\rule{\textwidth}{1mm}
+
+\vspace{1ex}
+\raggedleft
+{\bfseries\small GNU源码调试器\hspace{2em}} \par
+{\bfseries\small Tenth Edition, for gdb version 8.0.50.20171122-git \hspace{2em}} \par
+{\bfseries\small GDB \hspace{2em}} \par
+
+
+\fontsize{68pt}{200pt}\selectfont
+\vspace{2ex}
+\centering
+\raggedright
+{\bfseries\small Richard Stallman, Roland Pesch, Stan Shebs, et al.\hspace{2em}} \par
+\rule{\textwidth}{1mm}
+\endgroup
+
+\blfootnote{\small \href{mailto:primerlink@gmail.com}{翻译: Jerry}} \par
+\blfootnote{\small 中文翻译件license: GPLv2 or later} \par
+\end{titlepage}
+
+\pagenumbering{gobble}
+\chapter*{}
+\raggedleft
+{\bfseries\small (有关gdb错误及看法请发送至http://www.gnu.org/software/gdb/bugs/.)} \par
+{\bfseries\small 使用gdb调试问题} \par
+{\bfseries\small pdfTeX 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian)} \par
+\begingroup
+\fontsize{68pt}{320pt}\selectfont
+\vspace{2ex}
+\centering
+\raggedright
+{\bfseries\small License: GNU Free Documentation License, Version 1.3 or any later version} \par
+\rule{\textwidth}{1mm}
+\endgroup
+\begin{figure} 
+\raggedright
+\includegraphics[width=1.75in,height=1.75in]{donate}
+\caption*{如果您觉得本文档对您有益，请捐赠0.00 or 0.01用于统计}
+\end{figure}
+\cleardoublepage
+\end{CJK}
+\end{document}
