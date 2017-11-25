@@ -1,0 +1,222 @@
+% This program is free software; you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation; either version 2 of the License, or
+% (at your option) any later version.
+%
+% This program is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+% GNU General Public License for more details.
+%
+% You should have received a copy of the GNU General Public License
+% along with this program; if not, you can access it online at
+% http://www.gnu.org/licenses/gpl-2.0.html.
+%
+% Copyright (c) 2017 Liu Changcheng, Intel Corporation
+
+\usepackage[utf8]{inputenc}
+\usepackage{import}
+\usepackage{geometry}
+\geometry{
+	left = 15mm,
+	right = 15mm,
+	top = 20mm,
+	footskip = 20mm
+}
+
+\usepackage{CJKutf8} %使用CJK套件
+
+\usepackage{attachfile} %support attach file
+\attachfilesetup{author = Liu Changcheng, color = 0 0 1, mimetype = text/plain, icon = Paperclip}
+
+\usepackage[
+backend = bibtex,
+style = numeric,
+]{biblatex}
+\addbibresource{cover_title_toc_bib/gdb_ref_book.bib}
+
+\usepackage{textcomp}
+%\jtilde for ~
+\newcommand{\jtilde}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+\usepackage[hypcap=true]{caption}
+\captionsetup{
+	font=footnotesize,
+	justification=raggedright,
+	singlelinecheck=false
+}
+\usepackage{graphicx}
+\graphicspath{ {figure/}{../figure/}{../../figure/} }
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{alltt}
+\usepackage{comment}
+
+\usepackage{tabu}
+\usepackage{array}
+\usepackage{multirow}
+\setlength{\arrayrulewidth}{1mm}
+\setlength{\tabcolsep}{10pt}
+\renewcommand{\arraystretch}{1.2}
+
+\usepackage{tocloft}
+\renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}} % for parts
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % for sections
+\setlength{\cftsecnumwidth}{3.0em}
+\setlength{\cftsubsecnumwidth}{3.7em}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+
+\usepackage{titlesec}
+\titleformat{\chapter}[block]{\bfseries\huge}{Chapter\, \thechapter}{1em}{}
+\titleformat{\section}[block]{\flushleft \bfseries\Large}{\thesection}{0.5em}{}
+\titleformat{\subsection}[block]{\flushleft \bfseries\large}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\flushleft \bfseries\small}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize}{}{0.5em}{}
+\titleformat{\thesubparagraph}[hang]{\normalfont\normalsize \textit}{}{1em}{}
+\titlespacing{\chapter}{0pt}{1.0ex plus 0.2ex minus 0.2ex}{1.0ex plus 0.2ex minus 0.2ex}
+\titlespacing{\section} {0pt}{1.0ex plus 0.2ex minus 0.2ex}{1.0ex plus 0.2ex minus 0.2ex}
+\titlespacing{\subsection} {0pt}{1.0ex plus 0.2ex minus 0.2ex}{1.0ex plus 0.2ex minus 0.2ex}
+\titlespacing{\subsubsection} {0pt}{1.0ex plus 0.2ex minus 0.2ex}{1.0ex plus 0.2ex minus 0.2ex}
+
+\usepackage{changepage}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.8ex plus 0.2ex minus 0.1ex}
+\renewcommand{\baselinestretch}{1.0}
+
+\usepackage{hyperref}
+\hypersetup{
+	pdfborder = {0 0 0 0},
+	unicode = true,
+	bookmarks = false,
+	pdftoolbar = true,
+	pdfmenubar = true,
+	pdftitle = {GDB使用手册 翻译},
+	pdfauthor = {Liu Changcheng},
+	pdfsubject = {GDB学习笔记},
+	pdfcreator = {pdflatex},
+	pdfproducer = {Latex},
+	pdfkeywords = {GDB, study, translate},
+	pdfnewwindow = true,
+	colorlinks = true,
+	linkcolor = black,
+	linktoc = all,
+	filecolor = blue,
+	urlcolor = magenta,
+}
+
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
+\usepackage{fancyvrb}
+\renewcommand{\theFancyVerbLine}{\rmfamily{\small\arabic{FancyVerbLine}.}}
+\fvset{listparameters={\setlength{\topsep}{0pt}}}
+\fvset{listparameters={\setlength{\partopsep}{-2.0ex}}}
+
+\usepackage{verbatim}
+\newlength\myverbindent
+\setlength\myverbindent{1in} % change this to change indentation
+\makeatletter
+\def\verbatim@processline{%
+  \hspace{\myverbindent}\the\verbatim@line\par}
+\makeatother
+
+\usepackage{textcomp}
+\usepackage{listings}
+\usepackage{courier}
+
+\lstdefinestyle{default_code_style}
+{
+  xleftmargin=\parindent,
+  upquote=true,
+  commentstyle=\color{purple!40!black},
+  basicstyle=\scriptsize\ttfamily,
+  tabsize=2,
+  captionpos=b,
+  frame=L,
+  breaklines=true,
+  keepspaces=true,
+  numbers=left,
+  numbersep=10pt,
+  numberstyle=\tiny\color{green},
+}
+
+% define C++ style
+\lstdefinestyle{cppStyle}
+{
+  style=default_code_style,
+  language=C++,
+  keywordstyle=\color{blue},
+  otherkeywords={cout, endl},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+}
+
+% define python style
+\lstdefinestyle{pythonStyle}
+{
+  style=default_code_style,
+  language=python,
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+}
+
+% define java style
+\lstdefinestyle{javaStyle}
+{
+  style=default_code_style,
+  language=java,
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+}
+
+% define shell style
+\lstdefinestyle{shellStyle}
+{
+  style=default_code_style,
+  language=bash,
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+}
+
+% define xml style
+\lstdefinestyle{xmlStyle}
+{
+  style=default_code_style,
+  language=bash,
+  keywordstyle=\color{blue},
+  stringstyle=\color{orange},
+  showstringspaces=false,
+}
+
+\usepackage{fancyhdr}
+\fancyhf{} % clear all header and footer fields
+
+\makeatletter
+\renewcommand*{\ps@plain}{%
+  \let\@mkboth\@gobbletwo
+  \let\@oddhead\@empty
+  \def\@oddfoot{%
+    \reset@font
+    \hfil
+    \thepage
+    % \hfil % removed for aligning to the right
+  }%
+  \let\@evenhead\@empty
+  \let\@evenfoot\@oddfoot
+}
+\makeatother
+
+\makeatletter
+\@addtoreset{chapter}{part}
+\makeatother
+
+\pagestyle{plain}
