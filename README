@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 Use pdflatex to compile this book
 
+=======
+>>>>>>> 5bb14304e1a0a1909b208c9ce580d7985839b9f8
 Host info:
 	uname -a
 	Linux 4.4.0-31-generic #50-Ubuntu SMP Wed Jul 13 00:07:12 UTC 2016 x86_64 x86_64 x86_64 GNU/Linux
@@ -11,7 +14,10 @@ Host info:
 	Release:        16.04
 	Codename:       xenial
 
+<<<<<<< HEAD
 Need install tools:
+=======
+>>>>>>> 5bb14304e1a0a1909b208c9ce580d7985839b9f8
 sudo apt-get install texlive-base
 sudo apt-get install texlive-bibtex-extra biber
 sudo apt-get install texlive-fonts-recommended
