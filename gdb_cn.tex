@@ -85,44 +85,35 @@
 
 \appendix
 
-\renewcommand{\thechapter}{A\alph{chapter}}
+\titleformat{\chapter}[block]{\bfseries\huge}{Appendix\, \thechapter}{1em}{}
+
 \subimport{appendix_in_memoriam/}{In_Memoriam.tex}
 
-\renewcommand{\thechapter}{B\alph{chapter}}
 \subimport{appendix_format_doc/}{Format_Document.tex}
 
-\renewcommand{\thechapter}{C\alph{chapter}}
 \subimport{appendix_install_gdb/}{Install_GDB.tex}
 
-\renewcommand{\thechapter}{D\alph{chapter}}
 \subimport{appendix_debuggdb_self/}{debuggdb_self.tex}
 
-\renewcommand{\thechapter}{E\alph{chapter}}
 \subimport{appendix_remote_protocol/}{remote_serial_protocol.tex}
 
-\renewcommand{\thechapter}{F\alph{chapter}}
 \subimport{appendix_gdb_agent_mechanism/}{agent_expression_mechanims.tex}
 
-\renewcommand{\thechapter}{G\alph{chapter}}
 \subimport{appendix_target_description/}{target_description.tex}
 
-\renewcommand{\thechapter}{H\alph{chapter}}
 \subimport{appendix_os_info/}{os_info.tex}
 
-\renewcommand{\thechapter}{I\alph{chapter}}
 \subimport{appendix_trace_format/}{trace_file_format.tex}
 
-\renewcommand{\thechapter}{J\alph{chapter}}
 \subimport{appendix_gdb_index_section_format/}{gdb_index_section_format.tex}
 
-\renewcommand{\thechapter}{K\alph{chapter}}
 \subimport{appendix_manual_page/}{manual_page.tex}
 
-\renewcommand{\thechapter}{L\alph{chapter}}
 \subimport{appendix_gnu_public_license/}{gnu_public_license.tex}
 
-\renewcommand{\thechapter}{M\alph{chapter}}
 \subimport{appendix_gnu_free_doc_license/}{gnu_free_doc_license.tex}
+
+\titleformat{\chapter}[block]{\bfseries\huge}{}{0em}{}
 
 \subimport{appendix_concept_index/}{concept_index.tex}
 
